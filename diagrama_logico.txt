@@ -1,0 +1,22 @@
+LOJA (entidade)
+├── id_loja (PK)
+├── nome
+├── cnpj
+└── contato
+
+EQUIPAMENTO (entidade)
+├── id_equipamento (PK)
+├── id_loja (FK → LOJA)
+├── nome
+├── modelo
+├── numero_serie
+├── data_compra
+└── valor_compra
+
+GARANTIA (entidade)
+├── id_garantia (PK)
+├── id_equipamento (FK → EQUIPAMENTO)
+├── tipo (principal/estendida)
+├── data_inicio
+├── data_fim
+└── termos
